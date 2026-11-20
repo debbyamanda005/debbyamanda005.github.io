@@ -1,57 +1,191 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Microverse - Portfolio</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Debby Amanda Rosaline Pannuw — Informatics, AI evaluation</title>
+<meta name="description" content="Informatics graduate (S.Kom.) working on computer vision, model evaluation, and software testing. Thesis project: food calorie estimation with Vision Transformer and XGBoost.">
+<style>
+  :root{
+    --paper:#f2f4ef;
+    --ink:#16211c;
+    --pine:#1e5b45;
+    --muted:#5c6b63;
+    --rule:#d3dcd3;
+    --band:#e6ece2;
+    --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0;background:var(--paper);color:var(--ink);
+    font-family:var(--sans);font-size:16px;line-height:1.65;
+    font-feature-settings:"kern" 1;
+  }
+  .wrap{max-width:47rem;margin:0 auto;padding:0 1.5rem}
+  a{color:var(--pine);text-decoration:none;border-bottom:1px solid rgba(30,91,69,.35)}
+  a:hover{border-bottom-color:var(--pine)}
+  a:focus-visible,button:focus-visible{outline:2px solid var(--pine);outline-offset:3px;border-radius:2px}
+  h1,h2,h3{font-family:var(--serif);font-weight:400;letter-spacing:-.01em;margin:0}
+  p{margin:0}
+
+  /* masthead */
+  header.wrap{padding-top:4.5rem;padding-bottom:1.25rem}
+  .locale{font-size:.8125rem;color:var(--muted);letter-spacing:.01em}
+  .locale strong{color:var(--pine);font-weight:600}
+  h1{font-size:clamp(2.25rem,6vw,3.5rem);line-height:1.05;margin:.9rem 0 1.1rem;max-width:20ch}
+  .lead{font-size:1.0625rem;max-width:38ch;color:#2a3731}
+  .contact{display:flex;flex-wrap:wrap;gap:.35rem 1.25rem;margin-top:1.9rem;font-size:.9375rem}
+
+  /* sections */
+  section{padding:2.4rem 0}
+  .sec-head{display:flex;align-items:baseline;gap:1rem;border-top:1px solid var(--rule);padding-top:1.1rem;margin-bottom:1.6rem}
+  h2{font-size:1.375rem;line-height:1.2}
+  .sec-note{font-size:.8125rem;color:var(--muted);margin-left:auto;text-align:right}
+
+  .entry + .entry{margin-top:2rem}
+  .entry h3{font-size:1.125rem;line-height:1.3}
+  .entry .where{font-size:.9375rem;color:var(--muted);margin-top:.15rem}
+  .entry .when{font-size:.8125rem;color:var(--muted);font-variant-numeric:tabular-nums}
+  .entry p.body{margin-top:.7rem;max-width:62ch}
+  ul{margin:.7rem 0 0;padding-left:1.1rem;max-width:62ch}
+  li{margin-bottom:.45rem}
+  li::marker{color:var(--pine)}
+  .stack{font-size:.875rem;color:var(--muted);margin-top:.8rem}
+
+  /* data band */
+  .band{background:var(--band);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:1.5rem 0 1.75rem}
+  .band .wrap{max-width:56rem}
+  .band .caption{font-size:.8125rem;color:var(--muted);margin-bottom:1rem;max-width:56ch}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(7.5rem,1fr));gap:1.1rem 1rem}
+  .cell .kcal{font-family:var(--serif);font-size:1.75rem;line-height:1;color:var(--pine);font-variant-numeric:tabular-nums}
+  .cell .name{font-size:.8125rem;color:#33403a;margin-top:.3rem;line-height:1.35}
+  .cell .unit{font-size:.6875rem;color:var(--muted)}
+
+  /* skills */
+  .rows{display:grid;gap:.9rem}
+  .row{display:grid;grid-template-columns:11rem 1fr;gap:.5rem 1.25rem;padding-bottom:.9rem;border-bottom:1px solid var(--rule)}
+  .row:last-child{border-bottom:0;padding-bottom:0}
+  .row dt{font-size:.875rem;color:var(--muted)}
+  .row dd{margin:0;font-size:.9375rem}
+
+  footer{border-top:1px solid var(--rule);margin-top:1rem;padding:2rem 0 3.5rem;font-size:.875rem;color:var(--muted)}
+  footer .contact{margin-top:.9rem;font-size:.9375rem}
+
+  @media (max-width:34rem){
+    header.wrap{padding-top:3rem}
+    .sec-head{flex-wrap:wrap;gap:.25rem}
+    .sec-note{margin-left:0;text-align:left;width:100%}
+    .row{grid-template-columns:1fr;gap:.2rem;padding-bottom:1rem}
+    .grid{grid-template-columns:repeat(2,1fr)}
+  }
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
 </head>
 <body>
 
-    <section id="welcome">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <h1>Hi, <span>Saya Debby Amanda,</span></h1>
-                    <p>Saya Mahasiswa Teknik Informatika Universitas Muhammadiyah Surabaya, Saya percaya bahwa teknologi informasi memiliki potensi besar untuk menciptakan perubahan positif dalam masyarakat, dan saya bersemangat untuk berkontribusi dalam mewujudkan potensi tersebut. Saya berharap dapat belajar dan berkembang lebih untuk mendukung inovasi dan kolaborasi</p>
-                </div>
-                <div class="col-md-3">
-                    <img src="img/bg.png">
-                </div>
-            </div>
-        </div>
-    </section>
+<header class="wrap">
+  <p class="locale">Bogor, West Java, Indonesia · <strong>open to internship</strong></p>
+  <h1>Debby Amanda Rosaline Pannuw</h1>
+  <p class="lead">Informatics graduate working on computer vision and model evaluation. I built a system that estimates calories from a photo of food, and I test what I build.</p>
+  <nav class="contact" aria-label="Contact">
+    <a href="mailto:debbyamanda008@gmail.com">debbyamanda008@gmail.com</a>
+    <a href="https://github.com/debbyamanda005">GitHub</a>
+    <a href="https://linkedin.com/in/debby-amanda-rosaline-pannuw">LinkedIn</a>
+  </nav>
+</header>
 
-    <section id="project">
-        <div class="container">
-            <h2>Projects</h2>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="card shadow-lg ">
-                        <img class="card-img-top" src="img/1.png" alt="Card image cap">
-                        <div class="card-body">
-                          <p class="card-text">Website Berbasis PHP & MYSQL</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card ">
-                        <img class="card-img-top" src="img/2.png" alt="Card image cap">
-                        <div class="card-body">
-                          <p class="card-text">Karya Ilmiyah</p>
-                        </div>
- 
-            </div>
-        </div>
-    </section>
-    <section id="contact">
-        <h1>Universitas Muhammadiyah Surabaya</h1>
-        <h4>Teknik Informatika</h4>
-        <p><a href="">Email: debbyamanda005@gmail.com</a></p>
-        <p><a href="">Call us: +6281517446638</a></p>
-    </section>
+<main>
+  <section class="wrap">
+    <div class="sec-head">
+      <h2>Selected work</h2>
+      <span class="sec-note">Thesis work and an internship</span>
+    </div>
+
+    <article class="entry">
+      <h3>DebbyKalori — calorie estimation from a food photo</h3>
+      <p class="where">Thesis project · Universitas Muhammadiyah Surabaya</p>
+      <p class="body">A two-stage pipeline. First it classifies the food ingredient in a photo: YOLOv8 isolates each object, a frozen ViT-Base turns it into a 768-dimension embedding, and XGBoost assigns one of ten classes. Then the calorie figure is computed, not guessed — the weight the user enters is multiplied against the Indonesian food composition table (TKPI 2020).</p>
+      <ul>
+        <li>Ten ingredient classes, each tied to a fixed kcal value per 100 g.</li>
+        <li>Evaluated with precision, recall, F1-score, and a 10×10 confusion matrix to see which classes the model confuses.</li>
+        <li>Wrapped in a Streamlit app so the model can be used without touching code.</li>
+      </ul>
+      <p class="stack">Python · PyTorch · ViT-Base · XGBoost · YOLOv8 · Streamlit — <a href="https://github.com/debbyamanda005/DebbyKalori">source and full evaluation</a></p>
+    </article>
+
+    <article class="entry">
+      <h3>Camar Maritim — Android vessel tracking</h3>
+      <p class="where">PT Navicom Indonesia · Bekasi, West Java</p>
+      <p class="when">August – December 2024</p>
+      <p class="body">An Android application in Kotlin for tracking vessels in real time and managing vessel specification data. I built application components and the UI, connected them to the backend services, and tested the flows before handover.</p>
+      <ul>
+        <li>Functional testing across normal, boundary, and failure cases; edge-case findings documented before release.</li>
+        <li>Technical documentation written for handover and for the next developer onboarding.</li>
+      </ul>
+      <p class="stack">Kotlin · Android · REST integration · functional testing</p>
+    </article>
+  </section>
+
+  <div class="band">
+    <div class="wrap">
+      <p class="caption">The ten classes in DebbyKalori, with the reference value the app looks up. Calories are per 100 g, from TKPI 2020.</p>
+      <div class="grid">
+        <div class="cell"><div class="kcal">357</div><div class="name">Beras putih</div><div class="unit">kcal / 100 g</div></div>
+        <div class="cell"><div class="kcal">154</div><div class="name">Telur ayam ras</div><div class="unit">kcal / 100 g</div></div>
+        <div class="cell"><div class="kcal">112</div><div class="name">Bawang putih</div><div class="unit">kcal / 100 g</div></div>
+        <div class="cell"><div class="kcal">62</div><div class="name">Kentang</div><div class="unit">kcal / 100 g</div></div>
+        <div class="cell"><div class="kcal">46</div><div class="name">Bawang merah</div><div class="unit">kcal / 100 g</div></div>
+        <div class="cell"><div class="kcal">36</div><div class="name">Wortel</div><div class="unit">kcal / 100 g</div></div>
+        <div class="cell"><div class="kcal">36</div><div class="name">Cabai merah</div><div class="unit">kcal / 100 g</div></div>
+        <div class="cell"><div class="kcal">35</div><div class="name">Jagung kuning</div><div class="unit">kcal / 100 g</div></div>
+        <div class="cell"><div class="kcal">25</div><div class="name">Terung ungu</div><div class="unit">kcal / 100 g</div></div>
+        <div class="cell"><div class="kcal">24</div><div class="name">Tomat merah</div><div class="unit">kcal / 100 g</div></div>
+      </div>
+    </div>
+  </div>
+
+  <section class="wrap">
+    <div class="sec-head">
+      <h2>What I work with</h2>
+    </div>
+    <dl class="rows">
+      <div class="row"><dt>AI evaluation</dt><dd>LLM output review · instruction adherence · factual consistency · prompt engineering</dd></div>
+      <div class="row"><dt>Programming</dt><dd>Python · SQL · JavaScript · Kotlin</dd></div>
+      <div class="row"><dt>Tools</dt><dd>Git &amp; GitHub · API automation · Microsoft Excel · Figma · Canva</dd></div>
+      <div class="row"><dt>Testing &amp; writing</dt><dd>Functional testing · test case development · technical writing · academic writing</dd></div>
+      <div class="row"><dt>Languages</dt><dd>Indonesian (native) · English (professional reading and technical writing)</dd></div>
+    </dl>
+  </section>
+
+  <section class="wrap">
+    <div class="sec-head">
+      <h2>Education</h2>
+      <span class="sec-note">2022 – 2026</span>
+    </div>
+    <article class="entry">
+      <h3>Bachelor of Computer Science (S.Kom.), Informatics</h3>
+      <p class="where">Universitas Muhammadiyah Surabaya — Faculty of Engineering</p>
+      <ul>
+        <li>GPA 3.60 / 4.00.</li>
+        <li>Best GPA in the Informatics Study Program, Faculty of Engineering, 2026.</li>
+        <li>Introduction to Cybersecurity, Cisco Networking Academy, 2026.</li>
+      </ul>
+    </article>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Debby Amanda Rosaline Pannuw — Bogor, Indonesia.</p>
+    <nav class="contact" aria-label="Contact">
+      <a href="mailto:debbyamanda008@gmail.com">Email</a>
+      <a href="https://github.com/debbyamanda005">GitHub</a>
+      <a href="https://linkedin.com/in/debby-amanda-rosaline-pannuw">LinkedIn</a>
+    </nav>
+  </div>
+</footer>
 
 </body>
 </html>
